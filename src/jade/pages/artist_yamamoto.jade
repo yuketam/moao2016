@@ -1,0 +1,54 @@
+include mixins/mixin_common
+include mixins/mixin_artist
+
+doctype html
+html(lang='ja')
+	head
+		include components/meta_data
+
+		block scripts
+			script(type='text/javascript', src='js/module.artist_yamamoto.js')
+
+		block styles
+			link(type='text/css', rel='stylesheet', href='css/module.artist_yamamoto.css')
+
+	body
+		block navigation
+			include components/navigation
+			
+		//- --- header area ---
+		block header
+			+common_header('作家紹介')
+
+		block artist_profile
+			+artist_profile({
+			  name: {
+			    ja: '山本篤',
+			    en: 'Atsushi Yamamoto',
+			    img: 'img/artist_yamamoto_name.png'
+			  },
+			  thumbnail: 'img/artist_yamamoto.jpg',
+			  description: '1980年東京都生まれ。多摩美術大学　絵画学科油画専攻　卒業。主な個展に2016年「2016」（Art Center Ongoing、東京）。主なグループ展に2015年「TERATOTERA祭り　Encounter-邂逅-」（東京）、2014年「国立奥多摩美術館　13日間のプレミアムな漂流」（国立奥多摩美術館、東京）「Nendo」（98B at Panpasific、マニラ）、2013年「もののやりかた」（＠KCUA、京都）など。'
+			})
+			
+		block artist_works
+			+artist_works([
+			  {
+			    title: '「2016」(2016)',
+			    time: 39,
+			    description: '言葉の持つ引力を、感じ楽しむのが詩である。言葉が並んだ時、そこには必ず様々な形での、引きあう力が生じている。その引力は、個人が見てきたモノ。聞いてきた事。そんな、それぞれの経験の蓄積がそれを生み出している。イメージのもつ引力を巧みにコントロールし、組み立て、普段見えなかった景色を見せてくれるのが詩人であるならば、山本篤は詩人であり、「2016」は詩である。この作品を見ているとそんな事を思う。イメージとイメージが絶妙なバランスで引き合い、絡まり、１つの危うい塊となって｢不思議な｣としか形容できない景色が作りだされている。しかし、考えてもみれば、誰もが不思議な景色を内に秘めている。山本はこの作品でそれに形を与える事に成功しているだけなのかもしれない。',
+			    gallery: [
+						'img/artist_yamamoto_preview_2016.jpg'
+			    ]
+			  },
+			  {
+			    title: '「The Past and the Future in the Present」(2016)',
+			    time: 40,
+			    description: '山本曰く「15年ぶりに訪れたタイのチェンマイで再会する思い出と、都市の新しい息吹ヒューマンビートボックス アーティストとの出会い。初めて訪れた武富島の風景。2016年1月から7月までの時間軸の中で、過去と現在と未来が交錯する映像作品である」とのこと。 タイトルを直訳すると「現在の中の過去と未来」。 普遍的な事実として「今」という時間の中には「過去」そして「未来」が含まれているということになるのだろう。「因果」という言葉を調べると「今ある事物は、以前の何らかの事物の結果であり，また将来の何らかの事物の原因である」と出てくる。 つまりは山本の今回の作品は「因果」についての作品ということが言えるのかもしれない。考えてみれば「映像」というメディア自体、過去に起こったことの現在の「現れ」だ。そして、その「現れ」は未来の方向を向いている。',
+					gallery: [
+						'img/artist_yamamoto_preview_pastfuture.jpg'
+			    ]
+			  }
+			])
+		block footer
+			include components/footer

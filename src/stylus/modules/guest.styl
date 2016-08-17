@@ -1,0 +1,81 @@
+// guest common styles
+body
+  background-image url('../img/guest_bg.jpg')
+  background-repeat repeat-xy
+  background-position center top
+  &.device_sp
+    background-image url('../img/bg_sp_loop.jpg')
+
+.moao-header__text
+  width 450px
+
+.guest-header
+  .guest-header__text
+    font-size 2rem
+    padding-bottom 40px
+
+.guest-profile-content
+  padding-left 30px !important
+  padding-right 30px !important
+  padding-bottom 30px !important
+  text-align center
+  .guest-profile__thumbnail
+    position relative
+    display inline-block
+    .guest-profile__thumbnail-img
+      width 150px
+      height 150px
+      border-radius 80px
+    .guest-profile__date
+      position absolute
+      top 0
+      left 0
+      width 50px
+      height 50px
+      background-color #f00
+      border-radius 25px
+      line-height 50px
+      font-size 1rem
+  .guest-profile__name
+    padding-top 10px
+    letter-spacing 1px
+    text-align left
+    font-size 20px
+  .guest-profile__enname
+    padding-left 8px
+    font-size .6rem
+  .guest-profile__description
+    padding-top 10px
+    font-size .8rem
+    line-height 1.2rem
+    text-align left
+  .guest-profile__description--link
+    display inline
+    text-decoration underline
+    &:hover
+      cursor pointer
+      text-decoration underline
+  .guest-profile__website
+    padding-top 10px
+    font-size .8rem
+    line-height 1.2rem
+    text-align left
+    &:hover
+      text-decoration underline
+  .guest-profile__works-header
+    margin-top 15px
+    padding-top 6px
+    border-top 1px solid #fff
+    font-size .8rem
+  .guest-profile__works-item
+    line-height 1.2rem
+    padding-top 4px
+
+.device_multicolumn
+  .guest-header
+    padding-top 70px
+    padding-bottom 70px
+
+.device_onecolumn
+  .guest-header__text
+    display none

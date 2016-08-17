@@ -1,0 +1,70 @@
+include mixins/mixin_common
+include mixins/mixin_artist
+
+doctype html
+html(lang='ja')
+	head
+		include components/meta_data
+
+		block scripts
+			script(type='text/javascript', src='js/module.artist_wada.js')
+
+		block styles
+			link(type='text/css', rel='stylesheet', href='css/module.artist_wada.css')
+
+	body
+		block navigation
+			include components/navigation
+			
+		//- --- header area ---
+		block header
+			+common_header('作家紹介')
+
+		block artist_profile
+			+artist_profile({
+			  name: {
+			    ja: '和田昌宏',
+			    en: 'Masahiro Wada',
+			    img: 'img/artist_wada_name.png'
+			  },
+			  thumbnail: 'img/artist_wada.jpg',
+			  description: '1977年東京都生まれ。多摩美術大学中退後、渡英し、ゴールドスミスカレッジ・ファインアー科を卒業。主な展覧会に2015年「Invisible Energy」（ST PAUL St Gallery One and Two、オークランド）、2014年「国東半島芸術祭『希望の原理』」（旧香々地町役場、大分）、「ヨコハマトリエンナーレ2014」（横浜美術館、横浜）、2013年「Acting Out of Nothingness:from the APT Collection」（大和ファンデーション、ロンドン）。主な個展に2016年「どしゃぶりの虹（YAMAMBA）」（Art Center Ongoing、東京）など。'
+			})
+			
+		block artist_works
+			+artist_works([
+			  {
+			    title: '「遺跡への小径＃１」(2013)',
+			    time: 55,
+			    description: 'この作品で和田昌宏は、自分の見た夢を追いかける。<br />2013年5月、作品制作・発表のためメキシコに赴き、原因不明の体調不良に悩まされ、その中で見た、赤い円形の遺跡を彷徨う夢。<br />夢は、大きく分けて２通りの解釈が与えられる事が多い。自分の経験や願望が 無意識下において編集されたものである。という考え方と、超自然的な存在からのメッセージである。という考え方である。和田は、自分の夢に意味を与えてくれるであろう様々な人を訪ね、自分の見た夢の景色について何度も語る。夢は人に語られる事で整理され編集され、過去の自分が見たおぼろげな現実の輪郭が濃なっていく。夢という無意識下で編集されたモノを、意識下で編集し、なお更に映像として編集して、他者と共有しようと試みる和田は、いったい何を編集しているのか。そしてそれは何所からの、何のメッセージなのか。',
+			    gallery: [
+						'img/artist_wada_preview_iseki.jpg'
+			    ]
+			  },
+			  {
+			    title: '「Murakami Hiroshi」(2012)',
+			    time: 40,
+			    description: '村上裕という、体と頭と心を、全力で動かし生きている人間がいる。<br />そんな村上に魅せられた和田昌宏がカメラを向ける。すると、それに応える様に村上が、この世界の秘密について饒舌に語り出す。スクリーンの中の彼は、いったい、どのような時空を彷徨って、何を思っているのだろうか。そんな彼の言葉に耳を傾けていると、自分の足下が歪んでくる感覚に襲われる。彼の足下は、自分の立つ地面とは別のモノだと切り離して、笑って傍観する事は至って簡単な事だろう。しかし、そうやって出来た、都合の良い地面だけをつなぎ合わせて作った土地より、あらゆる可能性をつなぎ合わせて形成された土地の方が、豊かな未来を実らせる。私はそう信じている。',
+					gallery: [
+						'img/artist_wada_preview_murakami.jpg'
+			    ]
+			  },
+				{
+			    title: '「主婦のためのスタイリッシュな蠅」(2012)',
+			    time: 39,
+			    description: '五月の蠅と書いて「うるさい」と読む。ハエ叩きで追われ、ハエ取り紙で捕獲され、殺虫剤を散布され、そんな風に蠅はなにかと虐げられている。それというのも、人間が好まない環境を、蠅が好むという事から。人間にとって都合の悪い環境を増殖させる、害虫とされている。作品タイトルでは、そんな蠅が、スタイリッシュで、更には主婦のためだという。<br />この作品には、和田昌宏とその妻、息子が登場する。主婦とは、言わずもがな、和田の妻であろう。蠅が空間を自在に飛びまわり、関係を越境し、好むと好まざると環境を媒介する使者であると見立てるなら、その蠅に扮する和田は、妻のためにどんな環境を呈する使者でありえるのか。そして妻はそんな使者に何を求めるのか。',
+					gallery: [
+						'img/artist_wada_preview_hae.jpg'
+		    	]
+			  },
+				{
+			    title: '「YAMAMBA」(2016)',
+			    time: 40,
+			    description: '子供に絵本の読み聞かせをしているうちに、改めて「昔話」の内容の深さに驚いたという。「昔話」とは、その時代の景色を閉じ込めたタイムカプセルではないか、と語る和田昌宏。100年後の未来、「今」とは、どのような「昔」として語られているのか？この作品で和田の紡ぐ「物語」は、｢三枚のお札｣｢牛方と山姥｣「安達ケ原の鬼婆」などの、いわゆる「昔話」をトレースしつつ、過去・現在・未来を貫き覗く１つの窓である。小さなファンタジーとして、その中だけで完結し得ない。これを見る、様々な場所に立つ個人が、その窓から各々どの様な「物語」を覗くのか？この作品を観終わった後、和田の様に過去・現在・未来に対して口を開き、さらには、それぞれの物語を紡ごうとする個人が増える事を私は望む。',
+					gallery: [
+						'img/artist_wada_preview_yamamba.jpg'
+			    ]
+			  }
+			])
+		block footer
+			include components/footer

@@ -1,0 +1,257 @@
+include mixins/mixin_common
+include mixins/mixin_guest
+
+doctype html
+html(lang='ja')
+	head
+		include components/meta_data
+
+		block scripts
+			script(type='text/javascript', src='js/module.guest.js')
+
+		block styles
+			link(type='text/css', rel='stylesheet', href='css/module.guest.css')
+
+	body
+		block navigation
+			include components/navigation
+
+		//- --- header area ---
+		block header
+			+common_header('ゲスト作家紹介')
+
+		block guest-header
+			div.guest-header
+				p.guest-header__text.align-center ゲスト作家紹介
+		
+		block guest-content
+			div.guest-content
+				div.guest-content__row.row
+					+guest_profile({
+					  thumbnail: 'img/guest_shinoda.jpg',
+					  date: '8/20',
+					  name: {
+					    ja: '篠田太郎',
+					    en: 'Shinoda Taro'
+					  },
+					  description: '現代美術作家。1964年東京出身。造園を学んだ後に作家活動を開始。一貫して人間と自然の関わりを深く問う篠田の作品は、彫刻、ビデオ、 インスタレーションと多岐にわたり、国際的に高い評価を受けている。「Lunar Refection Transmission Technique Perfomance」(シャルジャ、2016年)、balzerARTprojects（バーゼル、2015年）イザベラ・ステュワート・ガードナー美術館（ボストン、2009年）、REDCAT (ロサンゼルス、2005年)、広島市現代美術館（広島、2002年）などで個展を開催。シドニー・ビエンナーレ（シドニー、2016年）、シャルジャ・ビエンナーレ（シャルジャ、2015年）「SCULPTURE GARDEN(COLLABORATIVE PROJECT) / KAZ OSHIRO / TARO SHINODA」ラス・シエネガス・プロジェクト（ロサンゼルス、2011年）、「ネイチャー・センス展」森美術館（2010年）、イスタンブール・ビエンナーレ（イスタンブール、2007年）、釜山ビエンナーレ（釜山、2006年）、横浜トリエンナーレ（2001年）などの国際展にも多数参加している。 ',
+					  works: []
+					})
+					+guest_profile({
+						thumbnail: 'img/guest_sekino.jpg',
+					  date: '8/21',
+					  name: {
+					    ja: '関野吉晴',
+					    en: 'Sekino Yoshiharu'
+					  },
+					  description: '探検家・医師。1949年東京都出身。一橋大学在学中に同大探検部を創設。1971年アマゾン全域踏査隊長としてアマゾン川全域を下る。その後25年間、南米への旅を重ねる。 1993年からは、アフリカに誕生した人類が、ユーラシア大陸を通ってアメリカ大陸にまで拡散していった約5.3万kmの行程を旅する「グレートジャーニー」を始める。10年の歳月をかけて、2002年タンザニア・ラエトリにゴール。 2004年からは「新グレートジャーニー　日本列島にやって来た人々」をスタート。 現在、「地球永住計画」を進めている。 1999年植村直己冒険賞（兵庫県日高町主催）受賞。2000年、旅の文化賞（旅の文化研究所）受賞。2013年、「グレートジャーニー・人類の旅〜この星に、生き残るための物語。〜」を国立科学博物館（特別展）開催。',
+					  works: [
+					  ]
+					})
+					+guest_profile({
+						thumbnail: 'img/guest_yoshimasu.jpg',
+				  	date: '8/27',
+					  name: {
+					    ja: '吉増剛造',
+					    en: 'Yoshimasu Gozo'
+					  },
+					  description: '詩人。1939年東京都出身。慶應義塾大学文学部国文科卒業。現代詩の最前線を切り拓く詩作品を発表するとともに、詩の朗読を伴うパフォーマンスを世界各地で行う。主な詩集に『黄金詩篇』（1970年、思潮社）、『オシリス、石ノ神』（1984年、思潮社）、『螺旋歌』（1990年、河出書房新社）、『花火の家の入口で』（1995年、青土社）、『ごろごろ』（2004年、毎日新聞社）、『怪物君』（2016年、しすず書房）など。映像作品に、『キセキ　gozoCine』（2009年、オシリス）、散文に、『詩学講義　無限のエコー』(2009年、慶應義塾大学出版会)、『我が詩的自伝』（2016年、講談社）、『心に刺青をするように』（2016年、藤原書店）、『GOZOノート』(2016年、慶應義塾大学出版会)など。2015年日本芸術院賞・恩賜賞。',
+					  works: [
+					  ]
+					})
+
+				div.guest-content__row.row
+					+guest_profile({
+						thumbnail: 'img/guest_kuzoku.jpg',
+					  date: '8/28',
+					  name: {
+					    ja: '相澤虎之助（空族）',
+					    en: 'Aizawa Toranosuke (KUZOKU)'
+					  },
+					  description: '映画監督/映像制作集団。1974年埼玉県出身。早稲田大学シネマ研究会を経て空族に参加。監督作、『花物語バビロン』（1997年） が山形国際ドキュメンタリー映画祭にて上映。『かたびら街』（2003年）は富田監督作品『雲の上』と共に７ヶ月間にわたり公開。空族結成以来、『国道20号線』（2007年）、『サウダーヂ』（2011）、『チェンライの娘』（2012年）と、富田監督作品の共同脚本を務めている。自身監督最新作はライフワークである東南アジア三部作の第2弾、『バビロン2 THE OZAWA』（2012年)。',
+						website: 'http://www.kuzoku.com/',
+					  works: [
+					  ]
+					})
+					+guest_profile({
+						thumbnail: 'img/guest_dokidoki.jpg',
+					  date: '9/3',
+					  name: {
+					    ja: 'ドキドキクラブ',
+					    en: 'Dokidoki Club'
+					  },
+					  description: '映像作家。ドキドキクラブは、わたしたちが普段気にも留めず通りすぎてしまうような日常の風景や街に溢れたアイコン、人の行動や慣習を、思いもよらぬ視点から映し出し、笑いに変えてしまう映像作家です。作家自身が「おもしろ」と呼ぶその一見滑稽で馬鹿馬鹿しく見える映像の中には、人間の在り方に対する深く鋭い批評が含まれており、わたしたちがいったいどのような原理に基づいて生きているのかという問いを観るものに投げかけます。 ',
+					  works: [
+					  ]
+					})
+					+guest_profile({
+						thumbnail: 'img/guest_kawada.jpg',
+					  date: '9/4',
+					  name: {
+					    ja: '川田淳',
+					    en: 'Kawada Jun'
+					  },
+					  description: 'アーティスト。1983年埼玉県出身。2007年武蔵野美術大学造形学部油絵学科卒業。IKEAでゲリラ的に作品を制作•発表するものや、マクドナルドで何も注文せずに店員をただ60秒間見つめる作品、福島の帰宅困難区域で花を摘み、それをミッキーマウスにプレゼントしに行く作品等、自身の行為を記録したものを主に映像作品として発表している。主な個展に2015年「終わらない過去」（東京ほか4ヶ所）、2013年「ケンナイ」（広島芸術センター/広島）、2012年「まなざしの忘却」（22:00画廊/東京）。近年では他に、2015年「DMZ Pilgrimage」（South Korea DMZ Piece-Life Hill/韓国）、2015年「When the Wind Blows / 風が吹くとき」（Millennium Court Arts Centre/北アイルランド）、2014年「Screen」（HIGURE 17-15cas/東京）などに参加。',
+					  works: [
+					  ]
+					})
+
+				div.guest-content__row.row
+					+guest_profile({
+						thumbnail: 'img/guest_tanaka.jpg',
+					  date: '9/4',
+					  name: {
+					    ja: '田中良祐',
+					    en: 'Tanaka Ryosuke'
+					  },
+					  description: 'アーティスト。1990年香川県出身。2014年東京造形大学造形美術学科絵画専攻卒業。現在、東京藝術大学大学院美術研究科在籍中。2016年ポーランド ヴロツワフ美術大学交換留学 。主な展覧会に2016年「ERASMUS」 (Aula、ヴロツワフ/ポーランド)、2015年「STRONG SMART 賢明と傷心」（3331 Arts Chiyoda/東京）、「躊躇」 (HIGURE/東京) 、2014年「大館•北秋田芸術祭2014 里に犬、山に熊」（大町商店街/秋田） 、「泪の上で」（泪橋交差点角 OKビル、/東京） などがある。2013年「MEC AWARD 2013」 佳作。 2012年「BEPPU ART AWARD」 所属アートグループ「階段部」入選。',
+					  works: [
+					  ]
+					})
+					+guest_profile({
+						thumbnail: 'img/guest_murakami.jpg',
+						date: '9/4',
+						name: {
+							ja: '村上裕',
+							en: 'Murakami Hiroshi'
+						},
+						description_with_link: '総合的統合芸術家。1983年静岡県出身。2000年代中盤から音楽を始める。最初は浅見北斗(害チューン)のトラック制作に関わる。浅見北斗との幻のデュオ芯グループで音楽活動開始。当初はサンプリングをしながら作るスタイルであったが、ライブのためにRC50を購入したことから即興的な打ち込みのライブをするようになる。以後、一人で即興的に打ち込みながらラップや歌を披露する現在のスタイルになる。自身のmyspace murakami hiroshi デイリーサービス( <a class="guest-profile__description--link" href="http://www.myspace.com/day88888888">http://www.myspace.com/day88888888</a> )では、村上が日常的に行っている即興の歌を配信。曲のタイトルの数字は収録された日を表している。 2014年トリオバンドreclearを結成する。',
+						works: [
+						]
+					})
+					+guest_profile({
+						thumbnail: 'img/guest_tsubota.jpg',
+					  date: '9/10',
+					  name: {
+					    ja: '坪田義史',
+					    en: 'Tsubota Yoshifumi'
+					  },
+					  description: '映画監督。1975年 神奈川県出身。多摩美術大学在学中に制作した映画『でかいメガネ』(2000年)で「イメージアートフォーラム・フェスティバル2000」でグランプリ受賞。劇場デビュー作品『美代子阿佐ヶ谷気分』(2009年)で、国内外で高い評価を得る。2012年は文化庁在外芸術家派遣によりニューヨークと日本で活動。2016年、リリー・フランキー、寺島しのぶ、橋本愛を主演に迎えた最新作『シェル・コレクター』が公開された。',
+					  works: [
+					  ]
+					})
+
+				div.guest-content__row.row
+					+guest_profile({
+						thumbnail: 'img/guest_yamashita.jpg',
+					  date: '9/11',
+					  name: {
+					    ja: '山下敦弘',
+					    en: 'Yamashita Nobuhiro'
+					  },
+					  description: '映画監督。1976年愛知県出身。大阪芸術大学芸術学部映像学科卒。 卒業制作の『どんてん生活』（1999年）が国内外で高い評価を受ける。続く『ばかのハコ船』（2002年）、『リアリズムの宿』（2003年）のダメ男青春三部作を経て、女子高生がバンドを組む音楽映画『リンダリンダリンダ』（2005年）で新境地を開拓、スマッシュヒットを飾る。『天然コケッコー』（2007年）では第32回報知映画賞・最優秀監督賞を最年少受賞、キネマ旬報ベストテンで第二位に入る。以後『マイ・バック・ページ』（2011年）、『苦役列車』（2012年）、『もらとりあむタマ子』（2013年）、BeeTV『午前3時の無法地帯』（2013年）、『超能力研究部の3人』（2014年）と作家性と娯楽性を共存させた形でキャリアを重ね『味園ユニバース』(2015年)の大ヒットに到る。連続ドラマ『山田孝之の東京都北区赤羽』（2015年）ではフェイクドキュメンタリー形式で出演と演出に携わる。 2016年は『オーバー・フェンス』（9月17日公開）、『ぼくのおじさん』（11月3日公開）の公開が控える。 ',
+					  works: [
+					  ]
+					})
+					+guest_profile({
+						thumbnail: 'img/guest_mine.jpg',
+						date: '9/17',
+						name: {
+							ja: '嶺豪一',
+							en: 'Mine Goichi'
+						},
+						description: '映画監督/俳優。1989年熊本県出身。多摩美術大学造形表現学部映像演劇学科卒業。『故郷の詩』(2012年)が第24回東京学生映画祭でグランプリ、観客賞をダブル受賞、その後、第34回ぴあフィルムフェスティバル審査員特別賞を受賞、第31回バンクーバー国際映画祭招待作品部門に招待される。現在は俳優としても幅広く活動している。 ',
+						works: [
+						]
+					})
+					+guest_profile({
+						thumbnail: 'img/guest_hirano.jpg',
+					  date: '9/18',
+					  name: {
+					    ja: '平野勝之',
+					    en: 'Hirano Katsuyuki'
+					  },
+					  description: '映画監督/AV監督。1964年静岡県浜松市出身。映画監督。 10代から8mm映画を撮り始めぴあフィルムフェスティバル3年連続入賞という偉業を成し遂げるも飯は食べていけず、知り合いを通じてAV制作会社シネマユニットガスに潜入、AV監督となる。 その後、過激AVメーカーV&Rを中心に『水戸拷悶』(1992年)、『わくわく不倫講座』（1995年）といったヌケないがひたすら突っ走る傑作AVを数多く監督し、1997年には女優・林由美香との北海道自転車旅行を記録した『由美香』を劇場公開。 その後も自転車旅行を題材とした『自転車三部作』を作り、厳冬期の北海道を自ら走って撮影した『白 THE WHITE』はベルリン国際映画祭に出品された。 2011年には故林由美香の死を描いた11年ぶりの劇場公開作『監督失格』が全国上映され大ヒット。 2016年4月、人気AV女優上原亜衣の引退作をドキュメントした5年ぶりの『青春100キロ』を制作。 ',
+					  works: [
+					  ]
+					})
+
+				div.guest-content__row.row
+					+guest_profile({
+						thumbnail: 'img/guest_igarashi.jpg',
+					  date: '9/19',
+					  name: {
+					    ja: '五十嵐耕平',
+					    en: 'Igarashi Kohei'
+					  },
+					  description: '映画監督。1983年静岡県出身。東京造形大学造形学部デザイン学科映画専攻卒業。東京藝術大学大学院映像研究科映画専攻監督領域修士課程修了。大学在学中に制作した『夜来風雨の声』（2008年）は、シネマ・デジタル・ソウル2008にて韓国批評家賞受賞。劇場公開オムニバス作品『恋につきもの』の一篇『豆腐の家』（2014年）を監督。東京藝術大学大学院の修了作品『息を殺して』（2014年）は第67回ロカルノ国際映画祭新鋭監督コンペティション部門へ正式出品。',
+					  works: [
+					  ]
+					})
+					+guest_profile({
+						thumbnail: 'img/guest_damien.jpg',
+						date: '9/19',
+						name: {
+							ja: 'ダミアン・マニヴェル',
+							en: 'Damien Manivel'
+						},
+						description: '映画監督。1981年フランス出身。コンテンポラリー・ダンサーとして活躍後、ル・フレノワ国立現代アートスタジオにて映画を学ぶ。初短編映画は『男らしさ』（2007年）、2作目の短編は 『静まれ、私の痛み』（2008年）。2010年に発表した3作目の短編『犬を連れた女』（2010年）はジャン・ヴィゴ賞を受賞。4作目となる『日曜日の朝』（2012年）はカンヌ国際映画祭の批評家週間短編大賞を受賞し反響を呼んだ。初長編映画となる『若き詩人』（2014年）はロカルノ国際映画祭審査員特別賞を受賞。第2作目となる『パーク(仮)』(原題: 『Le parc』) が、2016年カンヌ国際映画祭(ACID部門)に正式出品。',
+						website: 'https://medium.com/@ManiveltoIgarashi',
+						works: [
+						]
+					})
+					+guest_profile({
+						thumbnail: 'img/guest_cobra.jpg',
+					  date: '9/22',
+					  name: {
+					    ja: 'COBRA',
+					    en: 'COBRA'
+					  },
+					  description: 'ビデオアーティスト、XYZ collectiveディレクター。1981年千葉県出身。2011年東京世田谷にてXYZ collectiveを立ち上げる。 主な個展に2014年「THE OBJECTS / a something to catch the indigo blue」（Art Center Ongoing/東京） 、2013年「The Future is Wild」（TALION GALLERY/東京） 、2011年「GOLDILOCKS AND THE THREE」（Art Center Ongoing/東京）。近年のグループ展に2016年「囚われ、脱獄、囚われ、脱獄」（Komagome SOKO/東京）、2015年「Watching Things Burn」( Springsteen/ボルティモア) 、「Occasional Furniture」（ The Apartment/バンクーバー） 、「TRANSLATION THEME PARK」( Uppsala Konstmuseum/スェーデン) 、「comedie concrète」（MISAKO＆ROSEN/東京） 、2014年「XYZcollective - Man ＆ Play」（Brennan ＆ Griffin/ニューヨーク） などがある。',
+					  works: [
+					  ]
+					})
+
+				div.guest-content__row.row
+					+guest_profile({
+						thumbnail: 'img/guest_shibata.jpg',
+					  date: '9/22',
+					  name: {
+					    ja: '柴田祐輔',
+					    en: 'Shibata Yusuke'
+					  },
+					  description: '現代美術作家。1980年福岡県出身。千葉県在住。現実世界の曖昧さや不確かさに着目する作品をテーマに、国内外で発表している現代美術作家。2014年個展「BGM」（waitingroom/東京）、2013年個展「ドリブル」（Centro Cultural Borges /アルゼンチン）、2013年「六本木アートナイト2013」でのパフォーマンス『クリーニングディスコ』など。2016年8月17日～9月4日まで、Art Center Ongoing（吉祥寺）で個展予定。',
+					  works: [
+					  ]
+					})
+					+guest_profile({
+						thumbnail: 'img/guest_jinushi.jpg',
+						date: '9/22',
+						name: {
+							ja: '地主麻衣子',
+							en: 'Jinushi Maiko'
+						},
+						description: '美術家。1984年神奈川県出身。2010年多摩美術大学美術研究科絵画専攻修了。個人的な物語をテーマとしたドローイングや小説の制作から発展し、映像、インスタレーション、パフォーマンスなどを総合的に組み合わせた「新しい種類の文学」を創作する。主な個展に2016年「新しい愛の体験」（HAGIWARA PROJECTS/東京）、2015年「おおきな口、ちいさな手 もしくは ちいさな口、おおきな手」（Art Center Ongoing/東京）、主なグループ展に2016年「リターン・トゥ　トーキョーワンダーサイトレジデンス2015-2016」（トーキョーワンダーサイト本郷/東京）、「Unusualness Makes Sense」（チェンマイ大学アートセンター/チェンマイ）、2015年「Zero Gravity」(Matadero Madrid/マドリード)、2014年「仮想のコミュニティ・アジア―黄金町バザール2014」（黄金町/神奈川）など。 ',
+						works: [
+						]
+					})
+					+guest_profile({
+						thumbnail: 'img/guest_takada.jpg',
+						date: '9/22',
+						name: {
+							ja: '高田冬彦',
+							en: 'Takada Fuyuhiko'
+						},
+						description: '現代美術作家。1987年広島県出身。2013年東京芸術大学絵画専攻修士課程修了。ナルシシズムやいじめ、セレブリティや超人願望といったテーマを、主に作者自身が出演する偏執的、誇大妄想的な映像作品で表現する。主な個展に2016年「STORYTELLING」(児玉画廊/東京)、2014年「MY FANTASIA II」（Art Center Ongoing/東京）、主なグループ展に「MOTアニュアル2016　キセイノセイキ」（東京都現代美術館）など。',
+						works: [
+						]
+					})
+
+				div.guest-content__row.row
+					+guest_profile({
+						thumbnail: 'img/guest_oki.jpg',
+					  date: '9/24',
+					  name: {
+					    ja: '大木裕之',
+					    en: 'Oki Hiroyuki'
+					  },
+					  description: '映像作家。1964年東京都出身。東京大学工学部建築学科在学中に映像制作をはじめ、卒業の翌年に制作した『遊泳禁止』(1989年)でイメージフォーラム・フェスティバル1990審査員特別賞受賞。1996年「第46回ベルリン国際映画祭」NETPAC賞受賞。個展に2015年「〈ミヲキ/セイセイ〉～うちんこ3」。「虹のキャラバンサライ-あいちトリエンナーレ2016」に参加。',
+					  works: [
+					  ]
+					})
+
+		div.row
+			div.column.whole
+
+		block footer
+			include components/footer

@@ -1,0 +1,191 @@
+include mixins/mixin_common
+include mixins/mixin_schedule
+
+doctype html
+html(lang='ja')
+	head
+		include components/meta_data
+
+		block scripts
+			script(type='text/javascript', src='js/module.schedule.js')
+
+		block styles
+			link(type='text/css', rel='stylesheet', href='css/module.schedule.css')
+
+	body
+		block navigation
+			include components/navigation
+
+		//- --- header area ---
+		block header
+			+common_header('上映スケジュール')
+		
+		block schedule-header
+			div.schedule-header
+				p.schedule-header__text.align-center 上映スケジュール
+		
+		block schedule-content
+			div.schedule-content.row
+				div.schedule-content-dayline.column.four
+					p.schedule-content-header.align-center 太陽スクリーン
+					article.schedule-content-timetable.row
+						+schedule_item({
+							duration: 9,
+							time: '12:00 〜 13:27',
+							name: '小鷹拓郎',
+							title: '「こたか商店の最後の30日間」'
+						})
+						+schedule_break_item()
+						+schedule_item({
+							duration: 4,
+							time: '13:45 〜 14:25',
+							name: '和田昌宏',
+							title: '「Murakami Hiroshi」'
+						})
+						+schedule_break_item()
+						+schedule_item({
+							duration: 4,
+							time: '14:40 〜 15:20',
+							name: '和田昌宏',
+							title: '「YAMAMBA」'
+						})
+						+schedule_break_item()
+						+schedule_item({
+							duration: 4,
+							time: '15:35 〜 16:15',
+							name: '山本篤',
+							title_smaller: true,
+							title: '「The Past and the Future in the Present」'
+						})
+						+schedule_break_item()
+						+schedule_item({
+							duration: 4,
+							time: '16:30 〜 17:10',
+							name: '和田昌宏',
+							title: '「主婦のためのスタイリッシュな蠅」'
+						})
+						+schedule_break_item()
+						+schedule_item({
+							duration: 4,
+							time: '17:25 〜 18:05',
+							name: '山本篤',
+							title_smaller: true,
+							title: '「The Past and the Future in the Present」'
+						})
+						+schedule_break_item()
+						+schedule_item({
+							duration: 10,
+							time: '18:20 〜 20:00',
+							name: '小鷹拓郎',
+							title: '「小鷹拓郎短編映像集」'
+						})
+				div.schedule-content-dayline.column.four
+					p.schedule-content-header.align-center 月スクリーン
+					article.schedule-content-timetable.row
+						+schedule_item({
+							duration: 4,
+							time: '12:00 〜 12:40',
+							name: '山本篤',
+							title: '「2016」'
+						})
+						+schedule_break_item()
+						+schedule_item({
+							duration: 7,
+							time: '12:55 〜 14:10',
+							name: '小鷹拓郎',
+							title: '「ようこそ!堕落お遍路村へ」'
+						})
+						+schedule_break_item()
+						+schedule_item({
+							duration: 6,
+							time: '14:25 〜 15:20',
+							name: '和田昌宏',
+							title: '「遺跡への小径#1」'
+						})
+						+schedule_break_item()
+						+schedule_item({
+							duration: 9,
+							time: '15:35 〜 17:05',
+							name: '小鷹拓郎',
+							title: '「こたか商店の最後の30日間」'
+						})
+						+schedule_break_item()
+						+schedule_item({
+							duration: 4,
+							time: '17:20 〜 18:00',
+							name: '和田昌宏',
+							title: '「Murakami Hiroshi」'
+						})
+						+schedule_break_item()
+						+schedule_item({
+							duration: 4,
+							time: '18:15 〜 18:55',
+							name: '和田昌宏',
+							title: '「YAMAMBA」'
+						})
+						+schedule_break_item()
+						+schedule_item({
+							duration: 4,
+							time: '19:10 〜 19:50',
+							name: '山本篤',
+							title_smaller: true,
+							title: '「The Past and the Future in the Present」'
+						})
+						+schedule_empty_item_10()
+
+				div.schedule-content-dayline.column.four
+					p.schedule-content-header.align-center 奥多摩スクリーン
+					article.schedule-content-timetable.last.row
+						+schedule_item({
+							duration: 4,
+							time: '12:00 〜 12:40',
+							name: '和田昌宏',
+							title: '「主婦のためのスタイリッシュな蠅」'
+						})
+						+schedule_break_item()
+						+schedule_item({
+							duration: 4,
+							time: '12:55 〜 13:35',
+							name: '山本篤',
+							title_smaller: true,
+							title: '「The Past and the Future in the Present」'
+						})
+						+schedule_break_item()
+						+schedule_item({
+							duration: 10,
+							time: '13:50 〜 15:30',
+							name: '小鷹拓郎',
+							title: '「小鷹拓郎短編映像集」'
+						})
+						+schedule_break_item()
+						+schedule_item({
+							duration: 4,
+							time: '15:45 〜 16:25',
+							name: '山本篤',
+							title: '「2016」'
+						})
+						+schedule_break_item()
+						+schedule_item({
+							duration: 7,
+							time: '16:40 〜 17:55',
+							name: '小鷹拓郎',
+							title: '「ようこそ!堕落お遍路村へ」'
+						})
+						+schedule_break_item()
+						+schedule_item({
+							duration: 6,
+							time: '18:10 〜 19:05',
+							name: '和田昌宏',
+							title: '「遺跡への小径#1」'
+						})		
+						+schedule_empty_item_82()
+
+			div.schedule-content.schedule-biguniverse
+				article.row.align-center
+					div.column.four
+					p.schedule-content-header.column.four 大宇宙スクリーン
+					div.column.four
+				article.row
+					p.schedule-content-timetable__item-title.column.whole ゲスト作品を上映するためのスクリーンです。<br />上映スケジュールに関しましては、SNSや本サイトのニュースにて情報を配信しています。開催日によって、スケジュールは異なりますので、ご確認の上、お間違いにならないよう、ご注意ください。
+		block footer
+			include components/footer

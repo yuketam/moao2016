@@ -1,0 +1,22 @@
+doctype html
+html(lang='ja')
+	head
+		include components/meta_data
+
+		block scripts
+			script(type='text/javascript', src='js/module.artist.js')
+
+		block styles
+			link(type='text/css', rel='stylesheet', href='css/module.artist.css')
+
+	body
+		block navigation
+			include components/navigation
+
+		//- --- header area ---
+		block header
+			div.header
+				p this is header
+
+		block footer
+			include components/footer

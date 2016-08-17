@@ -1,0 +1,19 @@
+
+mixin schedule_item(item)
+  div(class='schedule-content-timetable__item column whole tt_#{item.duration}')
+    p.schedule-content-timetable__item-time #{item.time}
+      span.schedule-content-timetable__item-name #{item.name}
+    if item.title_smaller
+      p.schedule-content-timetable__item-title.title-small #{item.title}
+    else
+      p.schedule-content-timetable__item-title #{item.title}
+
+mixin schedule_break_item()
+  div.schedule-content-timetable__item.column.whole.tt_rest
+    p.schedule-content-timetable__item-title.align-center 休憩15分
+
+mixin schedule_empty_item_10()
+  div.schedule-content-timetable__item.column.whole.tt_tsuki_end
+
+mixin schedule_empty_item_82()
+  div.schedule-content-timetable__item.column.whole.tt_oktm_end

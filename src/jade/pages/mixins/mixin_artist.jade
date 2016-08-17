@@ -1,0 +1,33 @@
+
+mixin artist_profile(item)
+  div.artist-profile
+    div.artist-profile-name.row.align-center
+      p.artist-profile-name__text #{item.name.ja}
+      div.artist-profile-name__img.column.whole
+        img(src='#{item.name.img}')
+      p.artist-profile-name__entext #{item.name.en}
+
+    div.artist-profile-content.row
+      div.column.four.align-center
+        img.artist-profile-content__thumbnail(src='#{item.thumbnail}')
+      div.artist-profile-content__description.column.eight
+        p.artist-profile-content__description-head PROFILE
+        p.artist-profile-content__description-text #{item.description}
+
+mixin artist_works(items)
+  div.artist-works
+    div.row
+      p.artist-works__header.column.whole.align-left 上映作品
+    div.row
+      for item in items
+        article.artist-work-item
+          div.row
+            div.column.whole.align-left
+              p.artist-work-item-header
+                span.artist-work-item-header__title #{item.title}
+                span.artist-work-item-header__time 上映時間 #{item.time} 分
+          div.row
+            p.artist-work-item-description.column.whole.align-left #{item.description}
+          div.artist-work-item-gallery.row.align-center
+            for i in item.gallery
+              img.artist-work-item-gallery__thumb(src='#{i}')

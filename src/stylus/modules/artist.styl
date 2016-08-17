@@ -1,0 +1,75 @@
+// artist common styles
+body
+  background-repeat repeat-xy
+  background-position left top
+  &.device_sp
+    background-image url('../img/bg_sp_loop.jpg')
+
+.moao-header__text
+  width 220px
+
+.artist-profile
+  .artist-profile-name__text
+    display none
+  .artist-profile-content__description-head
+    margin-top 0
+    padding-bottom 14px
+  .artist-profile-content__description-text
+    line-height 1.5rem
+
+.artist-works
+  padding-top 20px
+  .artist-works__header
+    margin 0 10px
+    padding-left 0 !important
+  .artist-work-item
+    margin-top 30px
+    &:first-child
+      margin-top 10px
+  .artist-work-item-header
+    padding-top 20px
+    border-top 1px solid #fff
+    line-height 2rem
+    vertical-align bottom
+    .artist-work-item-header__title
+      padding-top 10px
+      font-size 2rem
+    .artist-work-item-header__time
+      padding-left 10px
+      font-size .5rem
+  .artist-work-item-gallery
+      padding-top 20px
+      padding-bottom 20px
+    .artist-work-item-gallery__thumb
+      padding 0 10px
+      // 20160730 hack
+      // TODO fix here!
+      width 500px
+  .artist-work-item-description
+    line-height 1.8rem
+
+.device_multicolumn
+  .artist-profile
+    .artist-profile-content
+      padding-top 50px
+      padding-bottom 70px
+  .artist-works
+    .artist-works__header
+      font-size 1.4rem
+    .artist-work-item-gallery
+      padding-bottom 100px
+
+.device_onecolumn
+  .artist-works
+    .artist-works__header
+      padding-left 10px !important
+    .artist-work-item-header__title
+      display block
+      font-size 1.5rem
+    .artist-work-item-header__time
+      padding-left 0
+    .artist-work-item-gallery__thumb
+      // 20160730 hack
+      // TODO fix here!
+      margin-left -10px
+      width 80%

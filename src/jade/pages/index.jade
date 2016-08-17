@@ -1,0 +1,144 @@
+include mixins/mixin_index
+include mixins/calendar
+
+doctype html
+html(lang='ja')
+	head
+		include components/meta_data
+
+		block scripts
+			script(type='text/javascript', src='js/module.index.js')
+
+		block styles
+			link(type='text/css', rel='stylesheet', href='css/module.index.css')
+
+	body
+		block navigation
+			include components/navigation
+
+		//- --- header area ---
+		block header
+			article#header.header
+				p.h-logo__text 国立奥多摩映画館
+				span#header__logo.header__logo
+				span.header__cmLink
+				span.header__scrollLink
+
+		//- --- sub header area ---
+		block header-sub
+			article.header-sub
+				h1.h-title.row
+					p.h-title__text 国立奥多摩映画館 第3回展覧会「森の叫び」
+					img.column.whole.h-title__img(src='img/moao_header_title.png')
+
+		//- --- news area ---
+		//- block news
+		//- 	article.news
+		//- 		div.news-head.align-center
+		//- 			p.news-head__text ご挨拶(ニュース)
+		//- 			img.news-head__textimg(src='img/sectiontext_news.png')
+		//- 		div.row.news-content.align-center
+		//- 			p.news-content__text テキストテキストforSEO
+		//- 			div.column.two
+		//- 			img.column.eight.news-content__textimg(src='img/news.png')
+		//- 			div.column.two
+
+		//- --- greeting area ---
+		block greeting
+			article.greeting
+				div.greeting-head.align-center
+					p.greeting-head__text ご挨拶
+					img.greeting-head__textimg(src='img/sectiontext_greeting.png')
+
+			article.greeting.row
+				div.column.two
+				p.column.eight.greeting-content__text 1895年12月28日。新年を向える準備に慌ただしかったであろうフランス・パリの「グラン・カフェ」地下。リュミエール兄弟が発明した「シネマトグラフ」によって作られた世界ではじめての映画『工場の出口』が一般に公開されたそうです。それから、ちょうど120年と8か月と4日。そこから9,700㎞ほど離れた東京山中にて、この度「国立奥多摩美術館」第３回目の展覧会「国立奥多摩映画館～森の叫び～」を開催いたします。だれかわからない、この世界を作った大きな人は「時間」と「空間」という驚愕すべきモノを創りました。そして、それをという形で人間が疑似的に留められるようになって約121年。人間は様々な、時間と空間を映像として切り出し留め加工し、共有しようと試みてきました。映像とはなんなのか？そこには何が映し出され、それを見る我々はいったい何をみているのか？そんな事を考える時、私には改めて「美術」という言葉が、キーワードになるのではないかと思えてきます。ここでいう「美術」とは、芸術の１ジャンルとしての視覚芸術・造形芸術だけを指し、絵画や彫刻だけを示す、ましてや「わけのわからない」の類語の様に使われる「美術」ではありません。「美」という個人が何かを肯定するという世界を見る視線(心)を再び世界に還す「術」。「美術」。人類誕生から連綿と、音・声・絵・物・言葉・表情・身振り手振りを使い、続けられてきた「美術」。誤解を恐れずいうなら、本来「美術史」とは人間が何に心を動かしてきたのか、という「人間の歴史」そのモノであっていいと思っています。その中で、約121年前にようやく人類が手にした｢技・映像｣を使い、歴史を未来へ突き進める、今を生きる作家達が、どんな時間と空間を留め加工し共有しようとするのか？そんな事をご来場くださった皆様と話したり、考えたりできる展覧会になったらいいなと思っております。ぜひ足をお運びください。心より皆さまのご来場お待ち申し上げております。
+				div.column.two
+
+
+
+		block calendar
+			+calendar('index')
+
+		block artist
+			div.artist
+				div.artist-head.align-center
+					p.artist-head__text 作家紹介
+					img.artist-head__textimg(src='img/sectiontext_artist.png')
+				div.artist-item-wrapper.row.align-center
+					+artist_item({
+						name: '小鷹拓郎',
+						name_en: 'Takuro Kotaka',
+						thumbnail: 'img/artist_kotaka.jpg',
+						works: [
+							'「こたか商店の最後の30日間」',
+							'「ようこそ！堕落お遍路村へ」',
+							'「小鷹拓郎短編映像集」'
+						],
+						link: 'artist_kotaka.html'
+					})
+
+					+artist_item({
+						name: '山本篤',
+						name_en: 'Atsushi Yamamoto',
+						thumbnail: 'img/artist_yamamoto.jpg',
+						works: [
+							'「2016」',
+							'「The Past and the Future in the Present」'
+						],
+						link: 'artist_yamamoto.html'
+					})
+
+					+artist_item({
+						name: '和田昌宏',
+						name_en: 'Masahiro Wada',
+						thumbnail: 'img/artist_wada.jpg',
+						works: [
+							'「遺跡への小径＃１」',
+							'「Murakami Hiroshi」',
+							'「主婦のためのスタイリッシュな蠅」',
+							'「YAMAMBA」',
+						],
+						link: 'artist_wada.html'
+					})
+		block social
+			div.social
+				div.row
+					div.column.one
+					article.social-instagram.column.ten
+						a.social-instagram__heading(href='http://bit.ly/2adVtoJ') 
+							i.social-instagram__icon
+							p.social-instagram__name Instagram 
+							p.social-instagram__account @moao.jp
+						<script src="https://snapwidget.com/js/snapwidget.js"></script>
+						<iframe src="https://snapwidget.com/embed/code/186430" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; padding: 0 10px; background-color: #fff; "></iframe>
+
+				div.row
+					div.column.one
+					article.social-facebook.column.five
+						//- facebook page plugin
+						div#fb-root
+						<div class="fb-page" data-href="https://www.facebook.com/&#x56fd;&#x7acb;&#x5965;&#x591a;&#x6469;&#x7f8e;&#x8853;&#x9928;-The-National-Museum-of-Art-OkutamaMOAO-176315482497367/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/&#x56fd;&#x7acb;&#x5965;&#x591a;&#x6469;&#x7f8e;&#x8853;&#x9928;-The-National-Museum-of-Art-OkutamaMOAO-176315482497367/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/&#x56fd;&#x7acb;&#x5965;&#x591a;&#x6469;&#x7f8e;&#x8853;&#x9928;-The-National-Museum-of-Art-OkutamaMOAO-176315482497367/">国立奥多摩美術館　The National Museum of Art, Okutama（MOAO）</a></blockquote></div>
+					article.social-twitter.column.five
+						//- twitter widget
+						<a class="twitter-timeline" data-height="500" data-theme="light" href="https://twitter.com/moao_jp">Tweets by moao_jp</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+					div.column.one
+		
+		block sponsor
+			div.sponsor
+				div.row
+					div.column.one
+					div.sponsor-list-container.column.ten
+						dl.sponsor-list.sl-cooperation
+							dt.sponsor-list-index 協力
+							dd.sponsor-list-description LOKO GALLERY、dTV、マッチポイント、MISA SHIN GALLERY
+						dl.sponsor-list.sl-sponsor
+							dt.sponsor-list-index 助成
+							dd.sponsor-list-description 
+								span.sponsor-list-description__title アーツカウンシル東京
+								span.sponsor-list-description__sub （公益財団法人東京都歴史文化財団）
+								img.sponsor-list-description__logo(src='img/arts_council_logo.png')
+					div.column.one
+  
+		block footer
+			include components/footer

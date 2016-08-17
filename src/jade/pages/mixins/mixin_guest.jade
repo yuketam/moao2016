@@ -1,0 +1,26 @@
+mixin guest_spacer()
+  div.column.one
+
+mixin guest_profile(item)
+  article.guest-profile.column.four
+    div.guest-profile-content
+      div.guest-profile__thumbnail
+        img.guest-profile__thumbnail-img(src='#{item.thumbnail}')
+        p.guest-profile__date.align-center #{item.date}
+
+      p.guest-profile__name #{item.name.ja}
+        span.guest-profile__enname #{item.name.en}
+      if item.description
+        p.guest-profile__description #{item.description}
+      if item.description_with_link
+        p.guest-profile__description !{item.description_with_link}
+        
+      if item.website
+        a(href='#{item.website}')
+          p.guest-profile__website #{item.website}
+  //- TODO 上映作品が決まったらここを表示させる
+  //-    div.guest-profile__works
+  //-      p.guest-profile__works-header 上映作品
+  //-      div.guest-profile__works-list
+  //-      for i in item.works
+  //-        p.guest-profile__works-item #{i}

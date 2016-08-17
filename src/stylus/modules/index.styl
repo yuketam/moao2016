@@ -1,0 +1,251 @@
+@charset "UTF-8"
+
+// common plugins
+@import "nib"
+@import "../common/*"
+
+// global setting
+body
+	background-image url('../img/bg_loop.jpg')
+	background-repeat repeat-y
+	background-position center top
+
+// navigation
+.navigation
+	background-color #000
+
+// ヘッダー
+.header
+	position relative
+	background-repeat no-repeat
+	background-position 50% 0
+	background-attachment fixed
+	background-image url('../img/moao_header_parallax_bg_pc.jpg')
+	.h-logo__text
+		display none
+	.header__logo
+		position absolute
+		top 100px
+		left 50%
+		margin-left -238px
+		width 476px
+		height 590px
+		background-image url('../img/moao_header_parallax_logo.png')
+		background-repeat no-repeat
+
+	.header__scrollLink
+		position absolute
+		bottom 60px
+		left 50%
+		margin-left -30px
+		width 60px
+		height 38px
+		background-image url('../img/moao_header_parallax_scroll.png')
+		background-repeat no-repeat
+
+	.header__cmLink
+		display none
+		position absolute
+		bottom 380px
+		right 15%
+		width 118px
+		height 28px
+		background-image url('../img/moao_header_parallax_cmlink.png')
+		background-repeat no-repeat
+
+// ヘッダー sp用
+.device_sp&
+	.header
+		background-image url('../img/moao_header_parallax_bg_sp.jpg')
+	.header__logo
+		background-size contain
+		top 10%
+		margin-left -118px
+		width 238px
+		height 295px
+	.header__cmLink
+		background-size contain
+		bottom 20%
+		right 20px
+		width 89px
+		height 21px
+
+
+// サブヘッダー
+.header-sub
+	.h-title__text
+		display none
+	.h-title__img
+	.h-logo__img
+		padding 20px
+
+// ご挨拶(ニュース)
+.news
+	.news-head__text
+	.news-content__text
+		display none
+
+// ご挨拶
+.greeting
+	.greeting-head
+		padding-top 60px
+	.greeting-head__text
+		display none
+	.greeting-content__text
+		letter-spacing 2px
+		line-height 2rem
+
+// 作家紹介
+.artist
+	.artist-head
+		padding-top 60px
+	.artist-head__text
+		display none
+	.artist-head__subtext
+		display inline-block
+
+	.artist-item
+		.artist-item__name
+			margin 0
+			padding 10px 0
+			font-size 2rem
+			line-height 2rem
+		.artist-item__enname
+			font-size 8px
+		.artist-item-works
+			padding-top 20px
+		.artist-item-works__header
+			font-size 0.75rem
+		.artist-item-works__item
+			padding-top 4px
+			font-size 0.85rem
+		.artist-item__more
+			padding-top 20px
+			color #ffef00
+			font-size 0.75rem
+			.artist-item__morelink
+				position relative
+				padding-left 10px
+				&:hover
+					text-decoration underline
+				&:after
+					content ''
+					position absolute
+					display block
+					left 0
+					top 2px
+					width 10px
+					height 10px
+					background-image url('../img/index_artist_link_tri.png')
+					background-repeat no-repeat
+					background-position left center
+
+// カレンダー
+.calendar
+	.calendar-head
+		padding-top 60px
+
+// ソーシャル
+.social
+	padding-top 40px
+	.social-facebook
+	.social-twitter
+		padding 10px
+		height 500px
+
+	.social-instagram
+		margin-bottom 20px
+		.social-instagram__heading
+			display flex
+			padding-top 8px
+			padding-left 8px
+			padding-bottom 10px
+			border-top-left-radius 6px
+			border-top-right-radius 6px
+			background-color #fff
+			color #000
+			font-weight bold
+		.social-instagram__icon
+			display block
+			width 36px
+			height 30px
+			background-image url('../img/index_instagram_icon.png')
+			background-size contain
+			background-repeat no-repeat
+			background-position left center
+		.social-instagram__name
+			line-height 30px
+		.social-instagram__account
+			padding-left 10px
+			line-height 30px
+			font-size 1.2rem
+			&:hover
+				text-decoration underline
+
+// sponsor
+.sponsor
+	padding-top 20px
+	font-size .8rem
+
+	.sponsor-list-container
+		border-top 1px solid #808080
+	.sponsor-list
+		display flex
+		.sponsor-list-index
+			width 40px
+			color #0098de
+		.sponsor-list-description
+			margin-left 0 !important
+		.sponsor-list-description__title
+			display block
+
+.device_multicolumn
+	.artist
+		.artist-item-wrapper
+			padding 20px !important
+		.artist-item
+			padding 0 !important
+			border-right 1px solid #808080 !important
+			&:first-child
+				border-left 1px solid #808080 !important
+			.artist-item__thumbnail
+				width 100%
+			.artist-item-works
+				height 140px !important
+	.greeting
+		.greeting-content__text
+			font-size 16px
+			line-height 38px
+	.sponsor
+		padding-top 80px
+		.sponsor-list-container
+			padding-top 30px
+		.sponsor-list
+			width 570px
+			margin 0 auto
+			padding-bottom 10px
+		.sl-sponsor
+			position relative
+			.sponsor-list-description__logo
+				position absolute
+				bottom 15px
+				margin-left 15px
+
+.device_onecolumn
+	.artist
+		.artist-item
+			margin-bottom 50px
+			.artist-item-body
+				border-right 1px solid #808080
+				border-left 1px solid #808080
+	.social
+		.social-facebook
+		.social-instagram
+		.social-twitter
+			margin-bottom 30px !important
+
+	.sponsor
+		.sl-sponsor
+			position relative
+			.sponsor-list-description__sub
+				display block

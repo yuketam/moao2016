@@ -1,0 +1,38 @@
+{
+  "name": "moao.jp-2016-grunt-task",
+  "version": "1.0.0",
+  "description": "the grunt-publish task for moao.jp",
+  "keywords": "奥多摩美術館",
+  "homepage": "http://moao.jp/",
+  "author": {
+    "name": "hiroyuki abe",
+    "email": "yuketam@gmail.com",
+    "url": "http://yuketam.info"
+  },
+  "dependencies": {
+    "jeet": "^6.1.4",
+    "nib": "^1.1.0",
+    "normalize": "^0.3.1",
+    "pills": "^1.0.1",
+    "rupture": "^0.6.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jade": "^1.0.0",
+    "grunt-contrib-stylus": "^1.2.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "licenses": [
+    {
+      "type": "moao.jp. All Rights Reserved",
+      "url": "http://moao.jp/"
+    }
+  ]
+}

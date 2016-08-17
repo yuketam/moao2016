@@ -1,0 +1,98 @@
+include mixins/mixin_common
+include mixins/mixin_about
+
+doctype html
+html(lang='ja')
+	head
+		include components/meta_data
+
+		block scripts
+			script(type='text/javascript', src='js/module.about.js')
+
+		block styles
+			link(type='text/css', rel='stylesheet', href='css/module.about.css')
+
+	body
+		block navigation
+			include components/navigation
+
+		//- --- header area ---
+		block header
+			+common_header('国立奥多摩美術館について')
+
+		block about-content
+			div.about-content
+				div.about-exhibition
+					div.about-title
+						div.row.align-center
+							div.column.one
+							div.column.ten
+								p.about-title__subtitle 第1回展覧会
+								p.about-title__title「国立奥多摩美術館開館記念展示　青梅ゆかりの名宝展」
+							div.column.one
+					div.about-gallery
+						div.about-gallery__row.row.align-center
+							div.column.one
+							div.about-gallery__container.column.five
+								img(src='img/about_2012_big.jpg')
+							div.about-gallery__container.column.five
+								div.row
+									div.column.whole
+										img(src='img/about_2012_s1.png')
+								div.row
+									div.column.whole
+										img(src='img/about_2012_s2.png')
+							div.column.one
+					div.about-description
+						div.about-description__row.row.align-left
+							div.column.one
+							p.column.ten 2012年11月、東京都青梅市に「国立奥多摩美術館」開館。同時に、国立奥多摩美術館館長には佐塚真啓が就任。第１回展覧会「国立奥多摩美術館　開館記念展示　青梅ゆかりの名宝展」を開催。参加作家は太田遼、河口遥、永畑智大、二藤建人、原田賢幸、山本篤、和田昌宏。初回となる展覧会に招集した大半は自主スペース運営を経験した作家を集った。作品発表の場や機会を「美術」との新たなクロスポイントを見出す取り組みの展覧会を開催した。「新たな」としたのは、本展のキュレーションを例に取れば、コンセプトなど鑑賞者の視度補正をする明確な言葉を示さない。言葉により特定の入り口や導入を示すことは「これは美術です」という口上や断定であり、鑑賞者が会場を訪れる前に取り交わされる密約である。その密かさはある種、傲慢に満ちた「お約束」と言える。つまり、「美術」と既に見なされたものを箱に収め、整え見せることから離れ、「美術である」という確定条件を保証せずに見る体験は『これは美術だろうか、そして今私は美術の鑑賞体験をしているのだろうか』という疑問・疑惑へと導く。それは日常と非日常のスリット（裂け目、境界）を企画側が設け提供しないことへとつながる。
+							div.column.one
+					//-div.about-link
+					//-	div.about-link__row.row
+					//-		div.column.four
+					//-		div.column.four.about-link__container.align-center
+					//-			a(href='http://archives-2012.moao.jp')
+					//-				p 詳しく見る
+					//-		div.column.four
+					
+
+				div.about-exhibition
+					div.about-title
+						div.row.align-center
+							div.column.one
+							div.column.ten
+								p.about-title__subtitle 第2回展覧会
+								p.about-title__title「国立奥多摩美術館13日間のプレミアムな漂流」
+							div.column.one
+						div.about-gallery
+							div.about-gallery__row.row.align-center
+								div.column.one
+								div.about-gallery__container.column.five
+									img(src='img/about_2014_big.jpg')
+								div.about-gallery__container.column.five
+									div.row
+										div.column.whole
+											img(src='img/about_2014_s1.png')
+									div.row
+										div.column.whole
+											img(src='img/about_2014_s2.png')
+								div.column.one
+						div.about-description
+							div.about-description__row.row.align-left
+								div.column.one
+								p.column.ten 2014年10月、第２回展覧会「国立奥多摩美術館13日間のプレミアムな漂流」を開催。参加作家は赤石隆明、牛島達治、小鷹拓郎、こようちひろ、Colliu、関野吉晴、武田龍、永畑智大、二十二会、松尾勘太、山本篤、和田昌宏。第２回目となる展覧会では前回の展覧会同様「美術とは」という疑問や「目の前のものは美術なのか」という疑惑の振り幅を広げることを念頭に置いた。招集作家の中に冒険家・関野吉晴が名を連ねていることから、断定したものを受け渡す展覧会ではなく、概念的な美術或いは前提とされた美術を見る段階から一段降りた展覧会である。「美術館」という固有名詞が指すイメージ（前提や設定）と相反した半構造的建築物でありながらどこか有機的な旧製材所とそこに点在する作品群と改めて対話から始めることを目的とした。ただ、懐疑的に美術作品を見せるのではなく、状況や提示の方法、もしくは鑑賞者への接続方法の可能性を示そうしている。また、作家内部においては他の展示では実現不可なプランに挑戦する機会や場としている。展覧会の過剰なイントロや仕切りは「美術」を担保とする一方で、鑑賞者の鑑賞体験により初めて効果が発動する道具である。時にその道具は、美術作品の生成と成立とは懸け離れた位置にあるものと思える。私たちは対話を始めるべきである。美術という土台に鑑賞者を登上させなければ成立しないものや、前提の上に言葉をむやみに積層させること、共通教養としての沈黙はもうやめよう。私たちの対話は「わからない」から始まり新たな可能性が生まれる。
+								div.column.one
+						//- div.about-link
+						//- 	div.about-link__row.row
+						//- 		div.column.four
+						//- 		div.column.four.about-link__container.align-center
+						//- 			a(href='http://archives-2014.moao.jp')
+						//- 				p 詳しく見る
+						//- 		div.column.four
+
+		div.row
+			div.column.whole
+
+		block footer
+			include components/footer

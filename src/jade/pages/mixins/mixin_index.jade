@@ -1,0 +1,12 @@
+mixin artist_item(item)
+  article.column.four.artist-item
+    a.artist-item-body(href='#{item.link}')
+      img.artist-item__thumbnail(src='#{item.thumbnail}')
+      p.artist-item__name #{item.name}
+      p.artist-item__enname #{item.name_en}
+      div.artist-item-works
+        p.artist-item-works__header 上映作品
+        for w in item.works
+          p.artist-item-works__item #{w}
+      p.artist-item__more
+        span.artist-item__morelink read more

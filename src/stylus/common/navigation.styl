@@ -1,0 +1,144 @@
+.navigation
+  position relative
+  .navigation-startpoint
+    padding-top 60px
+  .navigation-bg
+    display none
+    position fixed
+    z-index 100000
+    top 0
+    left 0
+    width 100%
+    background-color #000
+    opacity .8
+  .navigation-icon
+    position fixed
+    display block
+    width 100%
+    height 36px
+    padding 30px 30px 0 0
+    z-index 100001
+  .navigation-icon__icon
+    display inline-block
+    width 32px
+    height 32px
+    background-repeat no-repeat
+    background-image url('../img/moao_menu_icon_close.png')
+    &.icon_open
+      background-image url('../img/moao_menu_icon.png')
+  .navigation-menu
+    display none
+    position fixed
+    top 120px
+    left 0
+    width 100% !important
+    z-index 100010
+  .navigation-content
+    opacity 1
+  .navigation-area
+    line-height 2.5rem
+  .navigation-area__heading
+    padding-bottom 50px
+    &:hover
+      text-decoration underline
+  .navigation-heading
+    font-size 2.5rem
+  .navigation-subheading
+    font-size .8rem
+  .navigation-linkarea
+    border-left 1px solid #fff
+    padding-left 20px
+  .navigation-linktext
+    padding 10px 0
+    &:hover
+      text-decoration underline
+
+  .navigation-area__social
+    padding-top 30px
+
+  .navigation-linkicon
+  .navigation-linkicon__link
+    display inline-block
+    width 40px
+    height 40px
+    background-repeat no-repeat
+    background-size contain
+  .navigation-linkicon__link
+    padding-right 60px
+  .navigation-linkicon
+    &.twitter
+      background-image url('../img/icon_twitter.png')
+    &.facebook
+      background-image url('../img/icon_facebook.png')
+    &.instagram
+      background-image url('../img/icon_instagram.png')
+
+// スマホ縦向きの場合の対応
+.device_onecolumn
+  .navigation
+    .navigation-menu
+      top 80px
+    .navigation-heading
+      font-size 1.5rem
+      line-height 1.5rem
+    .navigation-area__lpp
+      display none
+    .navigation-area__heading
+      padding-bottom 10px
+    .navigation-linkarea
+      border-left none
+      font-size .8rem
+      line-height 1.2rem
+    .navigation-linkicon
+    .navigation-linkicon__link
+      width 30px
+      height 30px
+    .navigation-area__social
+      padding-top 10px
+      text-align center
+    .navigation-area__link
+      display flex
+      flex-wrap wrap
+      border-top 1px solid #fff
+      .navigation-area__link_link
+          flex auto
+          width 50%
+
+// スマホ縦向き・iphone5サイズの場合の対応
+.device_onecolumn
+  @media (max-height: 580px)
+    .navigation
+      .navigation-menu
+        top 30px
+
+// スマホ(小さめの端末) 横向きの場合の対応
+.device_onecolumn.device_sp.device_landscape
+  .navigation
+    .navigation-area
+      &.navigation-area__cpp
+        width 40% !important
+        margin-top -20px
+        border-right 1px solid #fff
+      &.navigation-area__rpp
+        width 50% !important
+        margin-top 20px
+      .navigation-area__link
+        border-top none
+// スマホ(大きめの端末) 横向きの場合の対応
+.device_multicolumn.device_sp.device_landscape
+  .navigation
+    .navigation-menu
+      top 50px
+    .navigation-heading
+      font-size 1.5rem
+      line-height 1.5rem
+    .navigation-area__heading
+      padding-bottom 10px
+    .navigation-linkarea
+      font-size .8rem
+      line-height 1.2rem
+    .navigation-linkicon
+    .navigation-linkicon__link
+      width 30px
+      height 30px
+      padding-right 50px

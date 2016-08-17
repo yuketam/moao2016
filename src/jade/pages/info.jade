@@ -1,0 +1,62 @@
+include mixins/mixin_common
+include mixins/mixin_info
+include mixins/calendar
+
+doctype html
+html(lang='ja')
+	head
+		include components/meta_data
+
+		block scripts
+			script(type='text/javascript', src='js/module.info.js')
+
+		block styles
+			link(type='text/css', rel='stylesheet', href='css/module.info.css')
+
+	body
+		block navigation
+			include components/navigation
+
+		//- --- header area ---
+		block header
+			+common_header('基本情報')
+
+		block info-header
+			div.info-header
+				p.info-header__text.align-center 会期・開館期間
+				p.info-header__subtext.align-center （6週・14日間）
+
+		block info-calendar
+			div.info-calendar
+				+calendar('info')
+
+		block info-access
+			div.info-access
+				div.info-section-header
+					p.info-section-header__text.align-center アクセス
+				div.info-access-map.row.align-center
+					div.info-access-map__text.column.whole
+						p.info-access-map__address 東京都青梅市二俣尾５－１５７
+						p.info-access-map__link
+							a(href='http://bit.ly/2adk0xX') Google mapで見る
+					div.info-access-map__map.column.whole
+						img(src='img/moao_map.png')
+					p.info-access-map__route 《電車》	JR中央線「立川駅」よりJR青梅線（青梅行）にて「青梅駅」。<br />
+						| JR青梅線（奥多摩行）に乗り換え「軍畑駅（いくさばたえき）」下車。（駅より徒歩13分）<br />
+						| 《車》	青梅I.C.出口直進後、右折で岩蔵温泉・飯能方面より小曽木街道－成木街道（約15km）
+
+		block info-ticket
+			div.info-access
+				div.info-section-header
+					p.info-section-header__text.align-center チケット
+			div.info-ticket
+				div.row.align-center
+					p.info-ticket__text 1日フリーパスチケット：1,000円
+					div.info-ticket__ticketimg.column.whole
+						img(src='img/moao_limited_ticket.jpg')
+
+		div.row
+			div.column.whole
+
+		block footer
+			include components/footer

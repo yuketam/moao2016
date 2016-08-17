@@ -1,0 +1,119 @@
+// schedule common styles
+body
+  background-image url('../img/schedule_bg.jpg')
+  background-repeat repeat-xy
+  background-position center top
+  &.device_sp
+    background-image url('../img/bg_sp_loop.jpg')
+
+.moao-header__text
+  width 520px
+
+.schedule-header
+  .schedule-header__text
+    font-size 2rem
+
+border_setting = 1px solid #fff
+.schedule-content
+  padding 20px 40px 0
+  .schedule-content-dayline
+    margin-top 40px
+    padding 0 !important
+  .schedule-content-header
+    margin-bottom 20px
+    padding 5px
+    border-left 1px solid #fff
+    border-right 1px solid #fff
+
+  .schedule-content-timetable
+    padding 0 !important
+    border-left border_setting
+    &.last
+      border-right border_setting
+
+  .schedule-content-timetable__item
+    height_base = 15px
+
+    margin 0
+    padding 5px 10px !important
+    border-bottom border_setting
+    &.tt_1
+      height height_base*1
+    &.tt_2
+      height height_base*2
+    &.tt_3
+      height height_base*3
+    &.tt_4
+      height height_base*4
+    &.tt_5
+      height height_base*5
+    &.tt_6
+      height height_base*6
+    &.tt_7
+      height height_base*7
+    &.tt_8
+      height height_base*8
+    &.tt_9
+      height height_base*9
+    &.tt_10
+      height height_base*10
+    &.tt_rest
+      padding 0 !important
+      height height_base*2
+      line-height height_base*2
+      background-image url('../img/schedule_timetable_rest_bg.png')
+      background-repeat repeat-xy
+      background-position left top
+    &.tt_tsuki_end
+      height height_base*1
+    &.tt_oktm_end
+      height 90px
+    &:first-child
+      border-top border_setting
+
+  .schedule-content-timetable__item-time
+  .schedule-content-timetable__item-name
+  .schedule-content-timetable__item-title
+    margin 0
+  .schedule-content-timetable__item-time
+    padding-bottom 4px
+    font-size .8rem
+  .schedule-content-timetable__item-name
+    margin-left 4px
+    padding 4px 2px
+    background-color #f00
+    font-size .6rem
+    vertical-align baseline
+  .schedule-content-timetable__item-title
+    &.title-small
+      font-size .8rem
+
+  &.schedule-biguniverse
+    padding-top 90px
+
+.device_multicolumn
+  .schedule-header
+    padding-top 50px
+    padding-bottom 50px
+
+.device_onecolumn
+  .schedule-header__text
+    display none
+  .schedule-content
+    .schedule-content-header
+      font-size 1.6rem
+    .schedule-content-dayline
+    .schedule-biguniverse
+      padding-top 70px !important
+
+    .schedule-content-timetable
+      border-right border_setting
+
+    .schedule-content-timetable__item
+      &.tt_tsuki_end
+      &.tt_oktm_end
+        display none
+
+.device_multicolumn.device_sp.device_landscape
+  .schedule-content
+    font-size .7rem
