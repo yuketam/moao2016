@@ -28,6 +28,10 @@ module.exports = function(grunt) {
 				src: '<%= paths.dist.src %>/images',
 				dest: '<%= paths.dist.dest %>/img'
 			},
+			pdf: {
+				src: '<%= paths.dist.src %>/pdf',
+				dest: '<%= paths.dist.dest %>/pdf'
+			},
 			icon: {
 				src: '<%= paths.dist.src %>/icon',
 				dest: '<%= paths.dist.dest %>'
@@ -150,6 +154,13 @@ module.exports = function(grunt) {
 			'favicon': {
 				src: ['<%= paths.icon.src %>/favicon.ico'],
 				dest: '<%= paths.icon.dest %>/favicon.ico'
+			},
+			'pdf-schedule': {
+				expand: true,
+				cwd: '<%= paths.pdf.src %>/',
+				src: ['**/*.pdf'],
+				dest: '<%= paths.pdf.dest %>',
+				ext: '.pdf'
 			},
 			'google-site-verification': {
 				expand: true,
