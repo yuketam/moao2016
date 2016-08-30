@@ -1,4 +1,5 @@
 include mixins/mixin_index
+include mixins/mixin_index_news
 include mixins/calendar
 
 doctype html
@@ -32,16 +33,16 @@ html(lang='ja')
 					img.column.whole.h-title__img(src='img/moao_header_title.png')
 
 		//- --- news area ---
-		//- block news
-		//- 	article.news
-		//- 		div.news-head.align-center
-		//- 			p.news-head__text ご挨拶(ニュース)
-		//- 			img.news-head__textimg(src='img/sectiontext_news.png')
-		//- 		div.row.news-content.align-center
-		//- 			p.news-content__text テキストテキストforSEO
-		//- 			div.column.two
-		//- 			img.column.eight.news-content__textimg(src='img/news.png')
-		//- 			div.column.two
+		block news
+			+index_news({
+				link: 'news_morimura.html',
+				title: '森村泰昌氏　緊急来館',
+				image: 'img/news_morimura.jpg',
+				time: {
+					from: '2016-08-29T15:00:00',
+					to: '2016-09-02T15:00:00'
+				}
+			})
 
 		//- --- greeting area ---
 		block greeting

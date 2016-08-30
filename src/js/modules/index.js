@@ -6,6 +6,7 @@ $(function() {
 	var $header = $('#header');
 	var $navigation = $('#navigation');
 	var $moao_header_logo = $('#header__logo');
+	var $newsarea_container = $('#gF4sdC');
 
 	var winHeight = $win.height();
 	var winWidth = $win.width();
@@ -48,6 +49,18 @@ $(function() {
 		var yPosition = (-1) * Math.floor(scrollTop / speed);
     $header.css({ backgroundPosition: '50% '+ yPosition + 'px' });
 	}
+
+	// newsエリアのバナーの表示期間コントロール
+	(function displayNewsBanner() {
+		var from_time = new Date($newsarea_container.data('bf'));
+		var to_time = new Date($newsarea_container.data('bt'));
+		var now = new Date();
+		if (from_time < now && now <= to_time) {
+			// now is the display time
+		} else {
+			$newsarea_container.remove();
+		}
+	})();
 
 	adjustHeader();
 	parallaxEffect();
