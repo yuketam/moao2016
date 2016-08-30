@@ -1,0 +1,15 @@
+include mixins/mixin_common
+
+doctype html
+html(lang='ja')
+	head
+		include components/meta_data
+
+		block styles
+			link(type='text/css', rel='stylesheet', href='css/module.news.css')
+
+	body
+		block news
+			div.row
+				div.column.whole.news-contents
+					img(src='img/news_morimura_detail.jpg')
