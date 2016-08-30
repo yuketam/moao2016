@@ -105,6 +105,13 @@ module.exports = function(grunt) {
 				],
 				dest: '<%= paths.css.dest %>/module.about.css'
 			},
+			'module-news': {
+				src: [
+					'<%= paths.css.lib.pills %>',
+					'<%= paths.css.src %>/modules/news.styl'
+				],
+				dest: '<%= paths.css.dest %>/module.news.css'
+			},
 			'module-artist_kotaka': {
 				src: [
 					'<%= paths.css.src %>/lib/*.styl',
