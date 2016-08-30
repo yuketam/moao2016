@@ -1,14 +1,15 @@
 mixin index_news(item)
   if item.title
     article#gF4sdC.news(data-bf='#{item.time.from}', data-bt='#{item.time.to}')
-      a(href='#{item.link}')
         div.news-head.align-center
           p.news-head__text ご挨拶(ニュース)
           img.news-head__textimg(src='img/sectiontext_news_s.png')
         div.row.news-content.align-center
           p.news-content__text #{item.title}
           div.column.two.news-content__text__sp
-          img.column.eight.news-content__textimg(src='#{item.image}')
+          a.column.eight(href='#{item.link}')
+            div.row
+              img.column.whole.news-content__textimg(src='#{item.image}')
           div.column.two
   else
     article.news_empty
