@@ -262,10 +262,10 @@ module.exports = function(grunt) {
 					livereload: true
 				},
 				files: [
-					'<%= paths.js.src %>/*/**.js',
-					'<%= paths.jade.src %>/*/**.jade',
-					'<%= paths.css.src %>/*/**.styl',
-					'<%= paths.img.src %>/*/**.*'
+					'<%= paths.js.src %>/**/*.js',
+					'<%= paths.jade.src %>/**/*.jade',
+					'<%= paths.css.src %>/**/*.styl',
+					'<%= paths.img.src %>/**/*.*'
 				],
 				tasks: ['uglify', 'jade', 'stylus', 'copy']
 			}
